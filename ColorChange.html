@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> JavaScript beginner testig </title>
+<style>
+/*Global css*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.flex_container{
+    width:100vw;
+    height:150vh;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+
+}
+div{
+    display:block;
+    margin:20px;
+    width:400px;
+    height:400px;
+    padding:20px;
+}
+.project{
+    width:300px;
+    height:300px;
+    display:block;
+    margin:auto;
+}
+button{
+    background:#ffffe6;
+    width:50px;
+    height:50px;
+    display:block;
+    margin:auto;
+    position:relative;
+    top:100px;
+}
+/*individual CSS*/
+h1{
+    text-align:center;
+    padding:50px;
+    font-size:50px;
+    background: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red); 
+    color:white;  
+}
+#colorChange{
+    background:red;
+}
+#krish{
+    background:green;
+}
+#rgbColor{
+    background:yellow;
+}
+#hexColor{
+    background:blue;
+    margin-top:-50px;
+    text-align:center;
+    font:20px bold;
+    line-height:150px;
+}
+/*Css for word change*/
+#word{
+    border:black solid;
+    width:300px;
+    height:300px;
+}
+#change{
+    border: black solid;
+    width:100px;
+    height:80px;
+    text-align:center;
+    font-size:20px;
+    line-height:4vh;
+    display:block;
+    margin:auto;
+    position:relative;
+    top:-200px;
+}
+/*Lights On/Off CSS: adjust the position of image and on/off switch*/
+
+#lightbulb{
+    display:block;
+    margin-top:-20px;
+}
+#on_off{
+    position:relative;
+    top:175px;
+    left:100px;
+}
+</style>
+</head>
+<body>
+<h1> My JavaScript beginner projects</h1>
+
+<div class="flex_container">
+<!------------------------------------------------------------------------------------------------->
+<div> 
+    <p><em>Project 1:</em>An array of color retrieved using random function.</p><br>
+    <p id="colorChange" class="project">
+    <button onclick = "myFunction()">click me</button>
+    <script>
+    var myArray=["red","green","yellow","blue","purple"];
+    function myFunction(){
+        document.getElementById('colorChange').style.background =myArray[Math.floor(Math.random()*5)];
+        }
+    </script>
+    </p>
+</div>
+<!---------------------------------------------------------------------------------------------------->
+<div>
+    <p><em>Project 2:</em> An array of color retrieved in a sequence using math count down function.</p><br>
+    <p id="krish" class ="project">
+    <button onclick = "sequenceFunction()">Krish's button</button>
+<script>
+    var myArr=["#ffff4d", "#66ff99", "#99bbff", "#ff8080", "#cc66ff"];
+    var number = 0;
+    function sequenceFunction(){
+        number = number + 1;
+        document.getElementById('krish').style.background =myArr[number % myArr.length];  
+    }
+</script>
+</p>
+</div>
+<!------New Project---------------------------------------------------------------------------->
+<div>
+<p><em>Project 3:</em> Function created to generate random rgb background color</p><br>
+<p id="rgbColor" class="project">
+<script>
+    var r, g, b = 0;
+function randomColor(){
+    r = Math.floor(Math.random()*255);
+    g = Math.floor(Math.random()*255);
+    b = Math.floor(Math.random()*255);
+    document.getElementById('rgbColor').style.background = "rgb("+r+", "+g+", "+b+")";
+    }
+</script>
+<button onclick = "randomColor()">Click Me </button>
+</p>
+</div>
+<!---------New Project----------------------------------------->
+<div>
+<p><em>Project 4:</em> Random hex color code generated with click</p><br>
+<button id="myBtn">Click Me</button>
+<p id ="hexColor" class="project"></p>
+<script>
+    var button = document.getElementById("myBtn");
+        button.addEventListener("click",Color);
+
+    function Color(){
+    var hexSymbols = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+    var String1, String2, String3, String4, String5, String6 = [];
+        String1 = [hexSymbols[Math.floor(Math.random()*16)]];
+        String2 = [hexSymbols[Math.floor(Math.random()*16)]];
+        String3 = [hexSymbols[Math.floor(Math.random()*16)]];
+        String4 = [hexSymbols[Math.floor(Math.random()*16)]];
+        String5 = [hexSymbols[Math.floor(Math.random()*16)]];
+        String6 = [hexSymbols[Math.floor(Math.random()*16)]];
+
+        var totalString=[String1, String2, String3, String4, String5, String6]
+        var finalString =totalString.toString();
+        finalString = finalString.replace(/,/g,"");
+        var colorCode= "#"+finalString;
+        document.getElementById("hexColor").innerHTML = "HexCode#:"+ " "+finalString;
+        document.getElementById("hexColor").style.background = colorCode;
+    }    
+</script>
+</div>
+<!-----------------New Project--------->
+<div>
+<p>Hello World expend with click by using just invoke function</p><br>
+<p id="word" class="project">
+    <p id = "change" onclick ="myWord()">Hello World!</p>
+    <script>
+        function myWord(){
+        document.getElementById("change").style.fontSize="50px";
+        document.getElementById("change").style.width ="200px";
+        document.getElementById("change").style.height="160px";
+        document.getElementById("change").style.top ="-230px";
+        document.getElementById("change").style.lineHeight="10vh";
+        }
+    </script>
+</p>
+</div>
+<!----Lights on/ off project-->
+<div>
+<p>Lights will turn on or off when you click on a button using if/else </p>
+<p class="project">
+<button id="on_off" onclick ="lightOn()">On/Off</button>
+<img id="lightbulb" src="bulboff.jpg" alt="picture of light bulb turned off" width="200px" height="300px">
+</p>
+<script>
+/*creating a function where when the picture matches a key word, it will pull that picture out of the file or otherwise*/
+function lightOn(){
+    var Lights = document.getElementById("lightbulb");
+    if (Lights.src.match("bulbon")){
+        Lights.src ="bulboff.jpg";
+    } else{
+        Lights.src ="bulbon.jpg";
+    }
+}
+</script>
+</div>
+</div>
+</body>
+</html>
+
+
