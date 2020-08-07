@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript challenges No. 7 to No. 12</title>
+<link rel="stylesheet" href="Es6projectsCss.css">
+</head>
+<body>
+<h1>Challenges #6 to #12 using ES6</h1>
+<!--create a flex container to organize these projects-->
+<div class = "flex_container">
+<!--first challenge is to create a button that display random quotes when the button is pressed using IIFE-->
+<div id="RQuote" class="box_size">
+    <h2><b>Project Random Quotes:  Write a IIFE function to generate random quotes (max 6).</b></h2>
+    <div id="innerQuote">
+        <button id="thebutton">Generate Random Quote</button>
+        <p id ="randomQuote"></p>
+        <script src="randomQuote.js"> </script>
+    </div>
+</div>
+<div id ="PassMessage" class="box_size">
+<!--Second Challenge is to pass a input to JavaScript written with arrow method-->
+    <h2 style="color:black">Project Pass Message: Write an arrow function that takes an input from html and redisplay it through JavaScript.</h2>
+    <p>Write a message:</p>
+        <textarea id="myMessage" type="text" value=" " row="4" cols="30" style="text-align:left"></textarea>
+        <button id="button"><b>SUBMIT</b></button>
+        <p>The message you left is:</p>
+        <section id="box"> 
+            <p id="Message"></p> 
+            <script src="PassMessage.js"></script>
+        </section>  
+</div>
+<!--Third challenge is to create your first counter app that counts up when the up button is pressed and down when the down button is pressed-->
+<div id ="Simplecounter" class="box_size">
+    <h2> Project Simple counter: write a function that counts up or down when you press a button. Differentiate a function with an identify and using function(arg).</h2>
+    <p id="counter">0</p>
+<br>
+<section id="container2">
+<!--pass a string as argument into the function count-->
+    <button class ="add_subtract" onclick = "Count('up'); Simple()">+</button>
+
+    <button class ="add_subtract" onclick ="Count('down'); Simple()">-</button>
+</section>
+    <script src = "SimpleCounter.js"></script>
+</div>
+<!--Rolling dice challenge------------------------------------->
+<div id ="Dice" class ="box_size">
+<h2 style = "color: purple">Challenge: Write a switch function that roll the dice.  If dice is even, then you win.  Otherwise, you loose.</h2>
+<img src ="diceOne.png" id = "picture">
+<p id ="message"></p>
+<button onclick = "rollDice()">Roll the Dice</button>
+<script src = "rollDice.js">
+</script>
+</div>
+<!---------------Free Code Camp Challenge: Temperature Converter-------->
+<div id = "Temperature" class = "box_size">
+<h2 style = "color:black">Challenge: Celsius and Fahrenheit converter.</h2>
+<!--create a dropbox to for individual to select the unit they want to convert-->
+<p id = "question">Enter your temperature</p><br><br>
+<section>
+<input type = "number" id = "value" value ="">
+<select name = "scale" id = "scale">
+    <option value = "celcius"> Celcius</option>
+    <option value = "Fahernheit"> Fahernheit </option>
+</select>
+</section><br>
+<button onclick = "convert()">CONVERT</button>
+<p id = "Result"></p>
+<script src = "celciusToFarenheit.js"></script>
+</div>
+<!---------Free Code Camp Challenge: Roman Numeral Converter--------------------->
+<div id = "Roman" class = "box_size">
+<h2 style= "color:black"> Challenge: Roman Numeral Converter.</h2>
+<section id = "secondBox">
+<p id="enter">Enter a number</p>
+<input type = "number" id = "number" value = "">
+<button id = "numButton">CONVERT</button>
+<p id ="answer"></p>
+<p id ="ansTwo"></p>
+</section>
+<script src ="romanNumeral.js"></script>
+</div>
+</div><!--end div for flex container-->
+</body>
+</html>

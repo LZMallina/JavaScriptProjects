@@ -1,0 +1,183 @@
+/*Global styling*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.flex_container{
+    width:100vw;
+    height:150vh;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size:10px;
+}
+h1{
+    text-align:center;
+    font-size:5rem;
+    padding:50px;
+}
+.box_size{
+    width:30rem;
+    height:30rem;
+    border-radius:5px;
+}
+button{
+    display:block;
+    margin:auto;
+    font-style:bold;
+    padding:10px;
+    background:#9494b8;
+    border-radius:5px;
+}
+h2{
+    text-align:center;
+    color:white;
+    padding:10px;
+    font-size:1.25rem;
+}
+/*CSS Styling for project random quote*/
+#RQuote{
+    background:#660066;
+}
+#innerQuote{
+    background:#c6538c;
+    width:20rem;
+    height:20rem;
+    display:block;
+    margin:auto;
+    border-radius:5px;
+    font-size:1.5rem;
+    padding:5px;
+    color:white;
+    font-family: 'Cedarville Cursive', cursive;
+}
+/*Css styling for project Passing message */
+#PassMessage{
+    background:#ffccff;
+    text-align:center;
+    font-size:1.5rem;
+}
+textarea{
+    border-radius:5px;
+    Height:5rem;
+    font-size:1.5rem;
+}
+#box{
+    background:#ccccff;
+    width:25rem;
+    height:5rem;
+    display:block;
+    margin:auto;
+    border-radius:5px;
+    border:#cccccc solid;
+    font-size:1rem;
+    text-align:left;
+}
+/*CSS for Simple Counter*/
+#Simplecounter{
+    background:grey;
+}
+#counter{
+    background:white;
+    text-align:center;
+    font-size:12rem;
+    color:blue;
+    display:block;
+    margin:auto;
+    width:20rem;
+    height:15rem;
+    border-radius:5px;
+}
+.add_subtract{
+    font-size:40px;
+    width:50px;
+}
+#container2{
+    display:flex;
+}
+/*Css for roll the dice */
+#Dice{
+    border:black solid 10px;
+}
+#picture{
+    display:block;
+    margin:auto;
+    width: 200px;
+}
+#message{
+    text-align: center;
+    font-size: 30px;
+}
+/*CSS for Temperature converstion*/
+#Temperature{
+    background:greenyellow;
+    text-align:center;
+}
+#question{
+    font-size: 1.5rem;
+    color:darkblue;
+}
+#value{
+    width:100px;
+    background:yellow;
+    padding:10px;
+    font-size:20px;
+    text-align:center;
+    border-radius:10px;
+}
+#scale{
+    font-size:20px;
+    width:150px;
+    border-radius:5px;
+}
+#Result{
+    background:white;
+    display:relative;
+    margin:50px;
+    color:red;
+    font-size:30px;
+}
+/*CSS for Roman Numeral Converter */
+#Roman{
+    background:white;
+    text-align: center;
+    border:blueviolet solid 50px;
+}
+#enter{
+    font-size:2rem;
+    color:green;
+    padding:10px;
+}
+#number{
+    border-radius:5px;
+    width:100px;
+    font-size: 30px;
+    margin:20px;
+    text-align:center;
+}
+#answer{
+    font-size:2rem;
+    color:brown;
+    margin:20px;
+}
+#ansTwo{
+    font-size:1rem;
+    color:red;
+}
+#secondBox{
+    background:#CCCCFF;
+    border-radius:5px;
+    display:block;
+    margin:auto;
+    width:85%;
+    height:75%;  
+}
